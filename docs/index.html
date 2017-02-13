@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>lua工具</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>tools4lua</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_xquick">Class xquick </a></li>
+<li><a href="#cc_Node">cc.Node </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>xquick</strong></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="topics/readme.md.html">readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>xquick</code></h1>
+<p>quick框架的一些扩展函数以及自定义函数</p>
+<p>
+<ul>
+    <li>xquick = require("xquick")</li>
+    <li>需要socket模块支持</li>
+</ul>
+</p>
+
+
+<h2><a href="#Class_xquick">Class xquick </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#xquick:nodeBorder">xquick:nodeBorder (node, colorOrder)</a></td>
+	<td class="summary">为节点画上边框</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#xquick:maskLayer">xquick:maskLayer (layerName)</a></td>
+	<td class="summary">创建一个带背景遮罩的层</td>
+	</tr>
+</table>
+<h2><a href="#cc_Node">cc.Node </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#displayCenter">displayCenter ()</a></td>
+	<td class="summary">设置至屏幕中心</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayTop">displayTop (offsetPosition)</a></td>
+	<td class="summary">设置至屏幕上面</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayBottom">displayBottom (offsetPosition)</a></td>
+	<td class="summary">设置至屏幕下面</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayLeft">displayLeft (offsetPosition)</a></td>
+	<td class="summary">设置至屏幕左边</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayRight">displayRight (offsetPosition)</a></td>
+	<td class="summary">设置至屏幕右边</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayLeftTop">displayLeftTop (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">设置至屏幕左上</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayTopLeft">displayTopLeft (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">同displayLeftTop</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayRightTop">displayRightTop (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">设置至屏幕右上</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayTopRight">displayTopRight (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">同displayRightTop</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayLeftBottom">displayLeftBottom (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">设置至屏幕左下</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayBottomLeft">displayBottomLeft (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">同displayLeftBottom</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayRightBottom">displayRightBottom (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">设置至屏幕右下</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#displayBottomRight">displayBottomRight (offsetPositionX, offsetPositionY)</a></td>
+	<td class="summary">同displayRightBottom</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#nodeCenter">nodeCenter (node)</a></td>
+	<td class="summary">设置至节点中心</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#nodeTop">nodeTop (node)</a></td>
+	<td class="summary">设置至节点上面</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#nodeBottom">nodeBottom (node)</a></td>
+	<td class="summary">设置至节点下面</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#nodeLeft">nodeLeft (node)</a></td>
+	<td class="summary">设置至节点左边</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#nodeRight">nodeRight (node)</a></td>
+	<td class="summary">设置至节点右边</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#xsize">xsize (newSize)</a></td>
+	<td class="summary">对node:size函数的扩展</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#click">click (callback)</a></td>
+	<td class="summary">普通节点的点击模拟事件</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_xquick"></a>Class xquick </h2>
+
+          <div class="section-description">
+          xquick 模块函数
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "xquick:nodeBorder"></a>
+    <strong>xquick:nodeBorder (node, colorOrder)</strong>
+    </dt>
+    <dd>
+    为节点画上边框
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">node</span>
+         节点
+        </li>
+        <li><span class="parameter">colorOrder</span>
+         颜色值，1~7，对应彩虹色，默认红色
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        nil
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">xquick:nodeBorder(layerNode, <span class="number">3</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "xquick:maskLayer"></a>
+    <strong>xquick:maskLayer (layerName)</strong>
+    </dt>
+    <dd>
+    创建一个带背景遮罩的层
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">layerName</span>
+         层名字
+ return 层
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="cc_Node"></a>cc.Node </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "displayCenter"></a>
+    <strong>displayCenter ()</strong>
+    </dt>
+    <dd>
+    设置至屏幕中心
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayCenter()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayTop"></a>
+    <strong>displayTop (offsetPosition)</strong>
+    </dt>
+    <dd>
+    设置至屏幕上面
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPosition</span>
+         距离对应方向边缘的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayTop()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayBottom"></a>
+    <strong>displayBottom (offsetPosition)</strong>
+    </dt>
+    <dd>
+    设置至屏幕下面
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPosition</span>
+         距离对应方向边缘的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayBottom()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayLeft"></a>
+    <strong>displayLeft (offsetPosition)</strong>
+    </dt>
+    <dd>
+    设置至屏幕左边
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPosition</span>
+         距离对应方向边缘的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayLeft()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayRight"></a>
+    <strong>displayRight (offsetPosition)</strong>
+    </dt>
+    <dd>
+    设置至屏幕右边
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPosition</span>
+         距离对应方向边缘的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayRight()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayLeftTop"></a>
+    <strong>displayLeftTop (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    设置至屏幕左上
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayLeftTop()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayTopLeft"></a>
+    <strong>displayTopLeft (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    同displayLeftTop
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayTopLeft()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayRightTop"></a>
+    <strong>displayRightTop (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    设置至屏幕右上
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayRightTop()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayTopRight"></a>
+    <strong>displayTopRight (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    同displayRightTop
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayTopRight()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayLeftBottom"></a>
+    <strong>displayLeftBottom (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    设置至屏幕左下
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayLeftBottom()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayBottomLeft"></a>
+    <strong>displayBottomLeft (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    同displayLeftBottom
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayBottomLeft()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayRightBottom"></a>
+    <strong>displayRightBottom (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    设置至屏幕右下
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayRightBottom()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "displayBottomRight"></a>
+    <strong>displayBottomRight (offsetPositionX, offsetPositionY)</strong>
+    </dt>
+    <dd>
+    同displayRightBottom
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">offsetPositionX</span>
+         X轴距离对应方向的像素值，不设置则紧贴
+        </li>
+        <li><span class="parameter">offsetPositionY</span>
+         Y轴距离对应方向的像素值，不设置则紧贴
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:displayBottomRight()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "nodeCenter"></a>
+    <strong>nodeCenter (node)</strong>
+    </dt>
+    <dd>
+    设置至节点中心
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">node</span>
+         父节点
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:nodeCenter(node)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "nodeTop"></a>
+    <strong>nodeTop (node)</strong>
+    </dt>
+    <dd>
+    设置至节点上面
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">node</span>
+         父节点
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:nodeTop(node)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "nodeBottom"></a>
+    <strong>nodeBottom (node)</strong>
+    </dt>
+    <dd>
+    设置至节点下面
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">node</span>
+         父节点
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:nodeBottom(node)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "nodeLeft"></a>
+    <strong>nodeLeft (node)</strong>
+    </dt>
+    <dd>
+    设置至节点左边
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">node</span>
+         父节点
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:nodeLeft(node)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "nodeRight"></a>
+    <strong>nodeRight (node)</strong>
+    </dt>
+    <dd>
+    设置至节点右边
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">node</span>
+         父节点
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:nodeRight(node)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "xsize"></a>
+    <strong>xsize (newSize)</strong>
+    </dt>
+    <dd>
+    对node:size函数的扩展  和size不同的是，size必须指定宽高，这个可以指定宽或者高
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">newSize</span>
+         新的节点大小，table
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        cc.Node
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:xsize({width = <span class="number">100</span>, height = <span class="number">200</span>})
+对比size
+node:size(<span class="number">100</span>, <span class="number">200</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "click"></a>
+    <strong>click (callback)</strong>
+    </dt>
+    <dd>
+    普通节点的点击模拟事件
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">callback</span>
+         点击之后的回调
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        nil
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">node:click(<span class="keyword">function</span> <span class="global">print</span>(<span class="string">"clicked!"</span>) <span class="keyword">end</span>)</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-02-13 11:53:35 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
